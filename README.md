@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⬡ Universal AI Hub - Web Client
 
-## Getting Started
+This is a high-performance **Next.js Web App** designed to interface with the **Universal MCP Hub** (aka Universal AI Hub). 
 
-First, run the development server:
+### Zero-Bloat Strategy
+I don't like local Node.js environments or heavy dependencies. This project is built to be deployed directly via **GitHub to Vercel**. No `npm install` or local `node_modules` required on your machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **Pure Web UI**: Mirroring the logic of the [Universal MCP Desktop Client](https://github.com/VolkanSah/Universal-MCP-Hub-sandboxed).
+* **Direct Connect**: Communicates directly from your browser to your Hub instance.
+* **Security**: HF Tokens and Hub URLs are stored locally in your browser's `localStorage`. No data is stored on Vercel.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting Started (The Clean Way)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Deploy**: Simply connect this repo to your [Vercel](https://vercel.com) account.
+2. **Settings**: Go to the **Settings** tab in the Web App and enter your `HF_TOKEN` and `HUB_URL`.
+3. **Connect**: Hit the **Connect** button to fetch your active tools, providers, and models.
+4. **Interact**: Use the Chat tab to prompt your AI Hub, upload files, and trigger MCP tools.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
+* Full parity with `hub.py` logic.
+* Dynamic tool and model fetching.
+* Base64 image and text file support.
+* GitHub dark-themed UI for maximum focus.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Created by Volkan Kücükbudak - 2026*
