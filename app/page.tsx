@@ -1,3 +1,6 @@
+// Universal AI WEB HUB
+// by Volkan Kücükbudak 
+// Under APache 2 & ESOL 1.1 and later
 "use client";
 import { useState, useEffect } from 'react';
 
@@ -128,10 +131,10 @@ export default function VolkanNextHub() {
     <div className="min-h-screen bg-[#0d1117] text-[#e6edf3] font-mono flex flex-col">
       {/* Header - Mirroring your PySide6 Header Bar */}
       <header className="bg-[#161b22] border-b border-[#21262d] p-2 flex flex-wrap items-center gap-4 shadow-md">
-        <span className="text-[#58a6ff] font-bold px-2">⬡ Universal MCP</span>
+        <span className="text-[#58a6ff] font-bold px-2">⬡ Universal AI HUB</span>
         
         <div className="flex items-center gap-2 text-[11px]">
-          <span className="text-gray-500">Tool:</span>
+          <span className="text-gray-500">Tools:</span>
           <select value={selectedTool} onChange={e => setSelectedTool(e.target.value)} className="bg-[#0d1117] border border-[#30363d] p-1 rounded">
             {tools.length > 0 ? tools.map(t => <option key={t}>{t}</option>) : <option>llm_complete</option>}
           </select>
