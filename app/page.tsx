@@ -276,6 +276,7 @@ function Sidebar({
   onSelectTool, onExport, config,
 }: {
   open:boolean; sessions:ChatSession[]; activeId:string; tools:string[];
+  providers:string[]; models:string[];
   selectedTool:string; selectedProvider:string; selectedModel:string;
   onSelectSession:(id:string)=>void; onNewChat:()=>void;
   onDeleteSession:(id:string)=>void; onSelectTool:(t:string)=>void;
