@@ -414,20 +414,7 @@ function Sidebar({
           <div style={{ fontSize:9, color:'#4b5563', letterSpacing:'.1em', textTransform:'uppercase', marginBottom:8 }}>
             Active Config
           </div>
-          {/* Tool */}
-          <div style={{ marginBottom:8 }}>
-            <div style={{ fontSize:9,color:'#4b5563',fontFamily:'monospace',marginBottom:4,letterSpacing:'.06em',textTransform:'uppercase' }}>Tool</div>
-            <select value={selectedTool} onChange={e=>onSelectTool(e.target.value)} style={{
-              width:'100%',background:'rgba(255,255,255,.04)',border:'1px solid rgba(255,255,255,.1)',
-              borderRadius:6,padding:'5px 8px',color:'#c4b5fd',fontSize:11,
-              fontFamily:'monospace',outline:'none',cursor:'pointer',
-            }}>
-              {(tools.length>0?tools:['llm_complete']).map(t=>(
-                <option key={t} value={t} style={{ background:'#1a1625' }}>{t}</option>
-              ))}
-            </select>
-          </div>
-          {/* Provider */}
+          {/* Provider dropdown */}
           <div style={{ marginBottom:8 }}>
             <div style={{ fontSize:9,color:'#4b5563',fontFamily:'monospace',marginBottom:4,letterSpacing:'.06em',textTransform:'uppercase' }}>Provider</div>
             <select value={selectedProvider} onChange={e=>onSelectProvider(e.target.value)} style={{
@@ -440,7 +427,7 @@ function Sidebar({
               ))}
             </select>
           </div>
-          {/* Model */}
+          {/* Model dropdown */}
           <div style={{ marginBottom:8 }}>
             <div style={{ fontSize:9,color:'#4b5563',fontFamily:'monospace',marginBottom:4,letterSpacing:'.06em',textTransform:'uppercase' }}>Model</div>
             <select value={selectedModel} onChange={e=>onSelectModel(e.target.value)} style={{
@@ -453,8 +440,13 @@ function Sidebar({
               ))}
             </select>
           </div>
+          {/* Active tool info */}
+          <div style={{ display:'flex',justifyContent:'space-between',marginTop:4 }}>
+            <span style={{ fontSize:10,color:'#4b5563',fontFamily:'monospace' }}>Tool</span>
+            <span style={{ fontSize:10,color:'#a78bfa',fontFamily:'monospace',maxWidth:140,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap' }}>{selectedTool}</span>
+          </div>
           {config.hub_url && (
-            <div style={{ marginTop:4,fontSize:9,color:'#374151',fontFamily:'monospace',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap' }}>
+            <div style={{ marginTop:6,fontSize:9,color:'#374151',fontFamily:'monospace',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap' }}>
               {config.hub_url}
             </div>
           )}
