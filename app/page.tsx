@@ -61,7 +61,7 @@ const SUPPORTED_TEXT = [
 const DEFAULT_CONFIG: HubConfig = {
   hf_token:'', hub_url:'', default_provider:'', default_model:'',
   default_tool:'llm_complete', hf_space_url:'',
-  github_url:'https://github.com/VolkanSah/Universal-MCP-Hub-sandboxed',
+  github_url:'https://github.com/VolkanSah/ai-hub',
   version: APP_VERSION,
 };
 // </ai-hub:constants>
@@ -749,9 +749,23 @@ export default function VolkanNextHub() {
             </div>
           </div>
 
-          <HubSelect label="Tool"     value={selectedTool}     onChange={setSelectedTool}     options={tools.length>0?tools:['llm_complete']}/>
-          <HubSelect label="Provider" value={selectedProvider} onChange={setSelectedProvider} options={providers}/>
-          <HubSelect label="Model"    value={selectedModel}    onChange={setSelectedModel}    options={models}/>
+          {/* Nav links */}
+          <div style={{ display:'flex', alignItems:'center', gap:2 }}>
+            {([
+              { label:'GitHub',   href: config.github_url   || 'https://github.com/VolkanSah',                         color:'#a78bfa' },
+              { label:'HF Space', href: config.hf_space_url || 'https://huggingface.co/spaces/codey-lab/Multi-LLM-API-Gateway/tree/main',                               color:'#7dd3fc' },
+              { label:'AI WEB Hub',  href: 'https://github.com/VolkanSah/ai-hub',                    color:'#7fffb2' },
+            ] as {label:string;href:string;color:string}[]).map(l=>(
+              <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" style={{
+                padding:'5px 12px', borderRadius:6, fontSize:11, fontFamily:'monospace',
+                color:'#4b5563', textDecoration:'none', letterSpacing:'.04em',
+                border:'1px solid transparent', transition:'all .15s',
+              }}
+                onMouseEnter={e=>{ e.currentTarget.style.color=l.color; e.currentTarget.style.borderColor=l.color+'44'; e.currentTarget.style.background=l.color+'11'; }}
+                onMouseLeave={e=>{ e.currentTarget.style.color='#4b5563'; e.currentTarget.style.borderColor='transparent'; e.currentTarget.style.background='transparent'; }}
+              >↗ {l.label}</a>
+            ))}
+          </div>
 
           <div style={{ marginLeft:'auto',display:'flex',alignItems:'center',gap:10 }}>
             <div style={{
@@ -1055,5 +1069,5 @@ export default function VolkanNextHub() {
 // =============================================================================
 // </ai-hub:main>
 // © 2026 Volkan Kücükbudak — Apache 2.0 + ESOL 1.1
-// https://github.com/VolkanSah/ai-hub
+// https://github.com/VolkanSah/Universal-MCP-Hub-sandboxed
 // =============================================================================
