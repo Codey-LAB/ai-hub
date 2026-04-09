@@ -8,7 +8,7 @@ Obsidian Glass UI — built to be deployed directly via **GitHub → Vercel**. N
 
 I don't like local Node.js environments or heavy dependencies. This project is built to be deployed directly via **GitHub to Vercel**. No `npm install` or local `node_modules` required on your machine.
 
-- **Pure Web UI** — Mirrors the logic of [Universal AI HUB](https://github.com/VolkanSah/Universal-MCP-Hub-sandboxed)
+- **Pure Web UI** — Mirrors the logic of [Universal AI Hub](https://github.com/VolkanSah/Universal-AI-Hub)
 - **Direct Connect** — Communicates directly from your browser to your Hub instance
 - **Privacy First** — HF Tokens and Hub URLs are stored only in your browser's `localStorage`. Nothing is stored on Vercel.
 
@@ -40,7 +40,7 @@ I don't like local Node.js environments or heavy dependencies. This project is b
 | ZIP | ✗ | ✓ |
 | XLSX | ✗ | ✓ |
 
-For PDF, ZIP and XLSX use the desktop client: [hub.py](https://github.com/VolkanSah/Universal-MCP-Hub-sandboxed)
+For PDF, ZIP and XLSX use the desktop client: [hub.py](https://github.com/VolkanSah/Universal-AI-Hub)
 
 ## How it was built
 ##### with help of AI
